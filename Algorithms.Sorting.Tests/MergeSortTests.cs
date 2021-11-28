@@ -6,13 +6,13 @@ using Xunit;
 
 namespace Algorithms.Sorting.Tests
 {
-    public class SelectionSortTests
+    public class MergeSortTests
     {
-        private readonly SelectionSort _target;
+        private readonly MergeSort _target;
 
-        public SelectionSortTests()
+        public MergeSortTests()
         {
-            _target = new SelectionSort();
+            _target = new MergeSort();
         }
 
         [Fact]

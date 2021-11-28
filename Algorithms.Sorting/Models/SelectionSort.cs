@@ -2,7 +2,7 @@
 
 namespace Algorithms.Sorting.Models
 {
-    class SelectionSort : ISort
+    public class SelectionSort : ISort
     {
         /// <summary>
         /// Sort in ascending order. Worst Case Runtime: O(n^2)
@@ -41,16 +41,9 @@ namespace Algorithms.Sorting.Models
                 }
                 if (index != i)
                 {
-                    Swap(arr, i, index);
+                    HelperMethods.Swap(arr, i, index);
                 }
             }
-        }
-
-        private void Swap(int[] arr, int val1, int val2)
-        {
-            var temp = arr[val1];
-            arr[val1] = arr[val2];
-            arr[val2] = temp;
         }
     }
 }

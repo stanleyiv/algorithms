@@ -15,7 +15,7 @@ namespace Algorithms.Sorting
                 if (i % 2 == 1) arr[i] = num * -1;
                 else arr[i] = num;
             }
-            var sorter = new MergeSort();
+            var sorter = new QuickSort();
             sorter.Sort(arr);
             Console.WriteLine(string.Join(", ", arr));
         }

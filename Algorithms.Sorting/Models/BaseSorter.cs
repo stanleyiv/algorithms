@@ -6,13 +6,13 @@ namespace Algorithms.Sorting.Models
     {
         public void Sort(int[] arr)
         {
-            Func<int, int, bool> comparer = (x, y) => x < y;
+            static bool comparer(int x, int y) => x < y;
             SortArray(arr, comparer);
         }
 
         public void SortDesc(int[] arr)
         {
-            Func<int, int, bool> comparer = (x, y) => x > y;
+            static bool comparer(int x, int y) => x > y;
             SortArray(arr, comparer);
         }
 

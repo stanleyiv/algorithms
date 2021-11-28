@@ -2,31 +2,15 @@
 
 namespace Algorithms.Sorting.Models
 {
-    public class SelectionSort : ISort
+    public class SelectionSort : BaseSorter
     {
         /// <summary>
-        /// Sort in ascending order. Worst Case Runtime: O(n^2)
+        /// O(n^2)
         /// </summary>
         /// <param name="arr"></param>
-        public void Sort(int[] arr)
+        /// <param name="comparer"></param>
+        protected override void SortArray(int[] arr, Func<int, int, bool> comparer)
         {
-            SortArr(arr, SortDirection.Ascending);
-        }
-
-        /// <summary>
-        /// Sort in descending order. Worst Case Runtime: O(n^2)
-        /// </summary>
-        /// <param name="arr"></param>
-        public void SortDesc(int[] arr)
-        {
-            SortArr(arr, SortDirection.Descending);
-        }
-
-        private void SortArr(int[] arr, SortDirection sortDirection = SortDirection.Ascending)
-        {
-            Func<int, int, bool> comparer = (x, y) => x < y;
-            if (sortDirection == SortDirection.Descending) comparer = (x, y) => x > y;
-
             for (var i = 0; i < arr.Length; i++)
             {
                 var value = arr[i];

@@ -7,9 +7,16 @@ namespace Algorithms.Sorting
     {
         static void Main(string[] args)
         {
-            var arr = new int[] { 6, 1, 3, -2, 0, 6, 7, 8, 1, 9, 11, 2, -1 };
-            var selection = new SelectionSort();
-            selection.Sort(arr);
+            var rand = new Random();
+            var arr = new int[100];
+            for (var i = 0; i < 100; i++)
+            {
+                var num = rand.Next(101);
+                if (i % 2 == 1) arr[i] = num * -1;
+                else arr[i] = num;
+            }
+            var sorter = new MergeSort();
+            sorter.Sort(arr);
             Console.WriteLine(string.Join(", ", arr));
         }
     }

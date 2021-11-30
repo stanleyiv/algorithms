@@ -13,13 +13,11 @@ namespace Algorithms.Sorting.Models
         {
             for (var i = 0; i < arr.Length; i++)
             {
-                var value = arr[i];
                 var index = i;
                 for (var j = i + 1; j < arr.Length; j++)
                 {
-                    if (comparer(arr[j], value))
+                    if (comparer(arr[j], arr[index]))
                     {
-                        value = arr[j];
                         index = j;
                     }
                 }
